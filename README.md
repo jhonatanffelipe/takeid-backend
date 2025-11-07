@@ -30,25 +30,24 @@ src/
 
 ## Como iniciar o projeto
 
-
 1. **Instale as dependências:**
-	```bash
-	yarn install
-	```
+    ```bash
+    npm install
+    ```
 
 2. **Execute as migrations:**
-	```bash
-	yarn knex migrate:latest
-	```
+    ```bash
+    npx knex migrate:latest
+    ```
 
 3. **Inicie o servidor:**
-	```bash
-	yarn start
-	```
-	O servidor estará disponível em `http://localhost:3007`
+    ```bash
+    npm start
+    ```
+    O servidor estará disponível em `http://localhost:3007`
 
 4. **Acesse a documentação Swagger:**
-	[http://localhost:3007/api-docs](http://localhost:3007/api-docs)
+    [http://localhost:3007/api-docs](http://localhost:3007/api-docs)
 
 ## Observações
 - O banco de dados utilizado é SQLite, por padrão salvo em `src/database`.
@@ -56,8 +55,8 @@ src/
 - Para rodar em ambiente diferente, ajuste as configurações em `src/database/knexfile.js`.
 
 ## Scripts úteis
-- `yarn knex migrate:latest` — Executa as migrations
-- `yarn start` — Inicia o servidor
+- `npx knex migrate:latest` — Executa as migrations
+- `npm start` — Inicia o servidor
 
 ---
 
