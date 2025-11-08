@@ -32,17 +32,17 @@ src/
 
 1. **Instale as dependências:**
     ```bash
-    yarn install
+    npm install
     ```
 
 2. **Execute as migrations:**
     ```bash
-    yarn knex migrate:latest
+    npx knex migrate:latest
     ```
 
 3. **Inicie o servidor:**
     ```bash
-    yarn start
+    npm start
     ```
     O servidor estará disponível em `http://localhost:3007`
 
@@ -55,8 +55,8 @@ src/
 - Para rodar em ambiente diferente, ajuste as configurações em `src/database/knexfile.js`.
 
 ## Scripts úteis
-- `yarn knex migrate:latest` — Executa as migrations
-- `yarn start` — Inicia o servidor
+- `npx knex migrate:latest` — Executa as migrations
+- `npm start` — Inicia o servidor
 
 ---
 
