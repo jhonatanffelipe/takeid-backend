@@ -4,7 +4,7 @@ const routes = require("./routes");
 const { errorHandler } = require("./erros/AppError");
 const { swaggerUi, swaggerSpec } = require("./swagger");
 
-app.use(express.json());
+app.use(express.json({ limit: "1024mb" }));
 app.use("/uploads", express.static("uploads"));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(routes);

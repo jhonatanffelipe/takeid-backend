@@ -41,6 +41,8 @@ module.exports = {
   async findAll(req, res) {
     const { employee_id } = req.params;
     const signatures = await knex("signatures").where({ employee_id });
-    res.json(signatures);
+    res.json(
+      signatures.sort((a, b) => new Date(b.signed_at) - new Date(a.signed_at))
+    );
   },
 };
