@@ -47,6 +47,35 @@ src/
 4. **Acesse a documentação Swagger:**
     [http://localhost:3007/api-docs](http://localhost:3007/api-docs)
 
+# Instalação do ngrok para Tunelamento de Rede
+
+Para que o aplicativo mobile (Expo) consiga acessar o backend local, é necessário instalar o [ngrok](https://ngrok.com/) para realizar o tunelamento da rede.
+
+## Instalação do ngrok via snap
+
+Execute o comando abaixo para instalar o ngrok usando o snap:
+
+```bash
+sudo snap install ngrok
+```
+
+## Como usar o ngrok
+
+
+Após instalar, siga os passos abaixo para configurar e iniciar o tunelamento para a porta do backend (por exemplo, 3007):
+
+1. **Crie uma conta no [ngrok](https://ngrok.com/)** e faça login para obter seu **authtoken**.
+2. **Configure o authtoken no terminal** (substitua `$YOUR_AUTHTOKEN` pelo token gerado na sua conta):
+    ```bash
+    ngrok config add-authtoken $YOUR_AUTHTOKEN
+    ```
+3. **Inicie o tunelamento para a porta do backend:**
+    ```bash
+    ngrok http 3007
+    ```
+
+O ngrok irá gerar uma URL pública. Utilize essa URL no app mobile para acessar o backend local.
+
 ## Observações
 - O banco de dados utilizado é SQLite, por padrão salvo em `src/database`.
 - As imagens enviadas via upload ficam na pasta `uploads/`.
