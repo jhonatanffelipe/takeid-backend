@@ -84,4 +84,3 @@ public
 # Swagger generated files
 swagger.json
 swagger.yaml
-db.sqlite
