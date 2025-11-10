@@ -1,5 +1,3 @@
-# takeid-backend
-# takeid-backend
 # TakeID Backend
 
 API para gerenciamento de colaboradores e assinaturas digitais.
